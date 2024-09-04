@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button onclick="playVideo('video1')">Play Video 1</button>
+        <button onclick="playVideo('video2')">Play Video 2</button>
+    </div>
+    
+    <video id="video1" src="assets/videos/edit.mp4" controls style="display:none;"></video>
+    <video id="video2" src="assets/videos/new_edit.mp4" controls style="display:none;"></video>
+
+    <script>
+        function playVideo(videoId) {
+            document.getElementById('video1').style.display = 'none';
+            document.getElementById('video2').style.display = 'none';
+            document.getElementById(videoId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
